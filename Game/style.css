@@ -1,0 +1,84 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.doraemon{
+    background-image: url(doraemon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 223px;
+    height: 224px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+.obstacle{
+    width: 300px;
+    height: 200px;
+    background-image: url(dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0%;
+    left: 84vw;
+}
+
+.animateDoraemon{
+    animation: doraemon 0.9s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 2s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-family: cursive;
+}
+
+#scoreContainer{
+    color: #54212f;
+    position: absolute;
+    font-weight: bold;
+    right: 50px;
+    top: 50px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: cursive;
+    width: 150px;
+}
+
+@keyframes doraemon{
+    0%{
+       bottom: 0%;
+    }
+    50%{
+       bottom: 500px; 
+    }
+    100%{
+         bottom: 0%;
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
